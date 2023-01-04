@@ -8,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   public showMenu: boolean = false;
+  public menuItems: any[] = [{
+    title: 'Gallery',
+    path: 'gallery',
+  }, {
+    title: 'About',
+    path: 'about',
+  }];
 
   constructor() { }
 
