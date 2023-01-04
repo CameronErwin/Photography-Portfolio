@@ -12,6 +12,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module')
       .then(m => m.HomeModule),
   },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./pages/gallery/gallery.module')
+      .then(m => m.GalleryModule),
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module')
+      .then(m => m.AboutModule),
+  },
 ];
 
 @NgModule({
