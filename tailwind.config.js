@@ -5,7 +5,11 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      blur: {
+        xs: '2px',
+      }
+    },
   },
   variants: {
     extend: {},
