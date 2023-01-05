@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
+
+import { GeneralService } from 'src/app/core/serivces/general.service';
+
+import { GalleryCategory } from 'src/app/shared/interfaces/GalleryCategory';
+
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
@@ -7,9 +13,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+  public categories$: Observable<GalleryCategory[]>;
+
+  constructor(
+    private generalService: GeneralService,
+  ) { }
 
   ngOnInit(): void {
+    this.categories$ = this.generalService.getGalleryCategories();
   }
 
 }
