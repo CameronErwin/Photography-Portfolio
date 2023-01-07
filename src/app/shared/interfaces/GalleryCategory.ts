@@ -1,4 +1,5 @@
 export interface GalleryCategory {
-  title: string;
+  id: number;
+  name: string;
   backgroundImageURL: string;
 }

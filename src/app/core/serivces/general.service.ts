@@ -9,19 +9,24 @@ export class GeneralService {
 
   private galleryCategories: GalleryCategory[] = [
     {
-      title: 'Cities',
+      id: 1,
+      name: 'Cities',
       backgroundImageURL: '../assets/images/007-Rome.png',
     }, {
-      title: 'Culture',
+      id: 2,
+      name: 'Culture',
       backgroundImageURL: '../assets/images/008-Rome.png',
     }, {
-      title: 'Landscapes',
+      id: 3,
+      name: 'Landscapes',
       backgroundImageURL: '../assets/images/026-Furkapasse.png',
     }, {
-      title: 'Portraits',
+      id: 4,
+      name: 'Portraits',
       backgroundImageURL: '../assets/images/007-Rome.png',
     }, {
-      title: 'Europe',
+      id: 5,
+      name: 'Europe',
       backgroundImageURL: '../assets/images/008-Rome.png',
     },
   ];
