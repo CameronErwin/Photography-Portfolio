@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 import { GalleryCategory } from 'src/app/shared/interfaces/GalleryCategory';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GeneralService {
 
@@ -17,6 +17,12 @@ export class GeneralService {
     }, {
       title: 'Landscapes',
       backgroundImageURL: '../assets/images/026-Furkapasse.png',
+    }, {
+      title: 'Portraits',
+      backgroundImageURL: '../assets/images/007-Rome.png',
+    }, {
+      title: 'Europe',
+      backgroundImageURL: '../assets/images/008-Rome.png',
     },
   ];
 
