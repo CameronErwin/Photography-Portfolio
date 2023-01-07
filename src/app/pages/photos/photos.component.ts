@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { Observable } from 'rxjs';
+
+import { GeneralService } from 'src/app/core/serivces/general.service';
+import { Photo } from 'src/app/shared/interfaces/Photo';
 
 @Component({
   selector: 'app-photos',
@@ -7,9 +13,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotosComponent implements OnInit {
 
-  constructor() { }
+  public photos$: Observable<Photo[]>;
+
+  private categoryID: number;
+
+  constructor(
+    private generalService: GeneralService,
+    private route: ActivatedRoute,
+  ) {
+      this.categoryID = Number(this.route.snapshot.paramMap.get('categoryID'));
+  }
 
   ngOnInit(): void {
+    this.photos$ = this.generalService.getGalleryPhotos(this.categoryID);
   }
 
 }

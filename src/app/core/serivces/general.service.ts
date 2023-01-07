@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { GalleryCategory } from 'src/app/shared/interfaces/GalleryCategory';
+import { Photo } from 'src/app/shared/interfaces/Photo';
 
 @Injectable({
   providedIn: 'root',
@@ -31,10 +32,30 @@ export class GeneralService {
     },
   ];
 
+  private photos: Photo[] = [
+    {
+      id: 1,
+      imageURL: '../assets/images/026-Furkapasse.png',
+    }, {
+      id: 1,
+      imageURL: '../assets/images/008-Rome.png',
+    }, {
+      id: 1,
+      imageURL: '../assets/images/007-Rome.png',
+    }, {
+      id: 1,
+      imageURL: '../assets/images/026-Furkapasse.png',
+    },
+  ];
+
   constructor() { }
 
   getGalleryCategories(): Observable<GalleryCategory[]> {
     return of(this.galleryCategories);
+  }
+
+  getGalleryPhotos(categoryID: number): Observable<Photo[]> {
+    return of(this.photos);
   }
 
 }

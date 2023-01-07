@@ -18,7 +18,7 @@ const routes: Routes = [
       .then(m => m.GalleryModule),
   },
   {
-    path: 'gallery/:category',
+    path: 'gallery/:categoryID',
     loadChildren: () => import('./pages/photos/photos.module')
       .then(m => m.PhotosModule),
   },

@@ -1,7 +1,6 @@
 <div class="mr-52 ml-52 mt-5 grid grid-cols-4 gap-4">
   <div class="relative cursor-pointer"
-    [routerLink]="'/gallery/' + (category.name | lowercase)"
-    [state]="{ id: category.id }"
+    [routerLink]="'/gallery/' + category.id"
     *ngFor="let category of categories$ | async">
     <img class="blur-xs rounded-xl hover:filter-none" [src]="category.backgroundImageURL" />
     <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800/50 rounded-b-xl -m-px pointer-events-none">
