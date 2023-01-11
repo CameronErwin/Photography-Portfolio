@@ -49,3 +49,7 @@ body {
 h2 {
   @apply select-none;
 }
+
+.no-padding-dialog .mat-dialog-container {
+  padding: 0;
+}
