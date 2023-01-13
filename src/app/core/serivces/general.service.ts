@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { GalleryCategory } from 'src/app/shared/interfaces/GalleryCategory';
@@ -14,22 +14,6 @@ import { API_URL } from 'src/environments/environment';
 })
 export class GeneralService {
 
-  private photos: Photo[] = [
-    {
-      id: 1,
-      imageURL: '../assets/images/026-Furkapasse.png',
-    }, {
-      id: 1,
-      imageURL: '../assets/images/008-Rome.png',
-    }, {
-      id: 1,
-      imageURL: '../assets/images/007-Rome.png',
-    }, {
-      id: 1,
-      imageURL: '../assets/images/026-Furkapasse.png',
-    },
-  ];
-
   constructor(
     private http: HttpClient,
   ) { }
@@ -40,7 +24,8 @@ export class GeneralService {
   }
 
   getGalleryPhotos(categoryID: number): Observable<Photo[]> {
-    return of(this.photos);
+    return this.http.get<{ photos: Photo[] }>(`${API_URL}/categories/${categoryID}`)
+      .pipe(map(res => res.photos));
   }
 
 }
