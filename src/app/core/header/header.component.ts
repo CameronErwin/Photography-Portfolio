@@ -11,9 +11,6 @@ export class HeaderComponent implements OnInit {
   public menuItems: any[] = [{
     title: 'Gallery',
     path: 'gallery',
-  }, {
-    title: 'About',
-    path: 'about',
   }];
 
   constructor() { }
