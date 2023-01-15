@@ -28,4 +28,9 @@ export class GeneralService {
       .pipe(map(res => res.photos));
   }
 
+  getRecentPhotos(limit: number = 5): Observable<Photo[]> {
+    return this.http.get<{ photos: Photo[] }>(`${API_URL}/photos?limit=${limit}`)
+      .pipe(map(res => res.photos));
+  }
+
 }
