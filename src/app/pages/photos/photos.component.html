@@ -1,4 +1,4 @@
-<div class="mr-52 ml-52 mt-5 columns-4 gap-8 space-y-8">
+<div class="mr-5 ml-5 lg:mr-52 lg:ml-52 mt-5 columns-4 gap-8 space-y-8">
   <div *ngFor="let photo of photos$ | async" (click)="expandPhoto(photo)">
     <img class="rounded-xl" [src]="photo.imageURL" />
   </div>
