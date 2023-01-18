@@ -1,6 +1,6 @@
 
 <div class="mt-5 grid place-content-center">
-  <img class="rounded-xl h-[55vh]" src="../../../assets/images/007-Rome.png" />
+  <img class="rounded-xl max-h-[55vh]" src="../../../assets/images/007-Rome.png" />
 </div>
 
 <div class="mt-10 grid place-content-center">
@@ -8,8 +8,10 @@
     Recent Images
   </h2>
 </div>
-<div class="mr-5 ml-5 mb-5 lg:mr-52 lg:ml-52 grid grid-cols-4 gap-8">
-  <div *ngFor="let photo of photos$ | async" (click)="expandPhoto(photo)">
-    <img class="rounded-xl" [src]="photo.imageURL" />
+<div class="flex justify-center">
+  <div class="flex flex-col gap-4 md:gap-8 md:flex-row">
+    <div class="flex justify-center" *ngFor="let photo of photos$ | async" (click)="expandPhoto(photo)">
+      <img class="rounded-xl mb-4 md:mb-0 md:max-h-[24vh] last:mb-4" [src]="photo.imageURL" />
+    </div>
   </div>
 </div>
