@@ -14,6 +14,7 @@ import { EnlargePhotoComponent } from 'src/app/shared/dialogs/enlarge-photo/enla
 })
 export class HomeComponent implements OnInit {
 
+  public homePhoto$: Observable<Photo>;
   public photos$: Observable<Photo[]>;
 
   constructor(
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.homePhoto$ = this.generalService.getHomePagePhoto();
     this.photos$ = this.generalService.getRecentPhotos();
   }
 

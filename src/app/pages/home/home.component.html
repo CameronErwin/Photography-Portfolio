@@ -1,6 +1,6 @@
 
 <div class="mt-5 grid place-content-center">
-  <img class="rounded-xl max-h-[55vh]" src="../../../assets/images/007-Rome.png" />
+  <img class="rounded-xl max-h-[55vh]" [src]="(homePhoto$ | async)?.imageURL" />
 </div>
 
 <div class="mt-10 grid place-content-center">

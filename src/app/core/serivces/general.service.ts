@@ -28,6 +28,11 @@ export class GeneralService {
       .pipe(map(res => res.photos));
   }
 
+  getHomePagePhoto(): Observable<Photo> {
+    return this.http.get<{ photos: Photo[] }>(`${API_URL}/photos?limit=1&sort=+rand&filter=show_on_home_page`)
+      .pipe(map(res => res.photos[0]));
+  }
+
   getRecentPhotos(limit: number = 4): Observable<Photo[]> {
     return this.http.get<{ photos: Photo[] }>(`${API_URL}/photos?limit=${limit}&sort=-created_timestamp`)
       .pipe(map(res => res.photos));
