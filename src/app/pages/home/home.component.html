@@ -1,16 +1,21 @@
 
-<div class="mt-5 grid place-content-center">
+<div class="mt-5 grid place-content-center md:hidden">
+  <h2 class="text-white">
+    Highlighted Photo
+  </h2>
+</div>
+<div class="mr-8 ml-8 md:mr-0 md:ml-0 md:mt-5 grid place-content-center">
   <img class="rounded-xl max-h-[55vh]" [src]="(homePhoto$ | async)?.imageURL" />
 </div>
 
 <div class="mt-10 grid place-content-center">
   <h2 class="text-white">
-    Recent Images
+    Recent Photos
   </h2>
 </div>
 <div class="flex justify-center">
   <div class="flex flex-col gap-4 md:gap-8 md:flex-row">
-    <div class="flex justify-center" *ngFor="let photo of photos$ | async" (click)="expandPhoto(photo)">
+    <div class="flex justify-center mr-8 ml-8 md:mr-0 md:ml-0" *ngFor="let photo of photos$ | async" (click)="expandPhoto(photo)">
       <img class="rounded-xl mb-4 md:mb-0 md:max-h-[24vh] last:mb-4" [src]="photo.imageURL" />
     </div>
   </div>
