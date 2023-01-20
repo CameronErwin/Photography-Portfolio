@@ -22,4 +22,8 @@ export class HeaderComponent implements OnInit {
     this.showMenu = !this.showMenu;
   }
 
+  disableNavbar(): void {
+    this.showMenu = false;
+  }
+
 }
