@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilityService } from '../services/utility.service';
 
 @Component({
   selector: 'app-header',
@@ -8,17 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   public showMenu: boolean = false;
-  public menuItems: any[] = [{
-    title: 'Gallery',
-    path: 'gallery',
-  }, {
-    title: 'About',
-    path: 'about',
-  }];
+  public menuItems: any[];
 
-  constructor() { }
+  constructor(
+    private utilityService: UtilityService,
+  ) { }
 
   ngOnInit(): void {
+    this.menuItems = this.utilityService.getMenuItems();
   }
 
   toggleNavbar(): void {

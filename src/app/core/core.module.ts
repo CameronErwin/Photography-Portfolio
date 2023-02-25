@@ -16,6 +16,7 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
   ],
   exports: [
     HeaderComponent,
+    SideMenuComponent,
   ],
 })
 export class CoreModule { }
