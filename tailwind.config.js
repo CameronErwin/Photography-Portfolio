@@ -8,7 +8,7 @@ module.exports = {
         xs: '2px',
       }, 
       colors: {
-        canvas: '#ddd6cd',
+        canvas: '#f7f0e7',
         ocean: '#204051',
         'ocean-light': '#3a5a6b',
         'light-fauna': '#cae8d5'
