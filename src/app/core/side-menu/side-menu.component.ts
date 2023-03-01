@@ -9,7 +9,11 @@ export class SideMenuComponent {
 
   @Input() isMobile: boolean;
 
-  public menuItems: any[] = [{
+  public menuItems: Array<{
+    title?: string,
+    path?: string,
+    divider?: boolean,
+  }> = [{
     title: 'Home',
     path: 'home',
   }, {
