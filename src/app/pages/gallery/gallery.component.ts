@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { GeneralService } from 'src/app/core/serivces/general.service';
+import { GeneralService } from 'src/app/core/services/general.service';
 
 import { GalleryCategory } from 'src/app/shared/interfaces/GalleryCategory';
 

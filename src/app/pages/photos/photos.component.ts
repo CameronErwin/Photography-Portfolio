@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Observable } from 'rxjs';
 
-import { GeneralService } from 'src/app/core/serivces/general.service';
+import { GeneralService } from 'src/app/core/services/general.service';
 import { Photo } from 'src/app/shared/interfaces/Photo';
 import { EnlargePhotoComponent } from 'src/app/shared/dialogs/enlarge-photo/enlarge-photo.component';
 
