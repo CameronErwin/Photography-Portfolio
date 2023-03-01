@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'photography-portfolio';
+
+  public isMobile$: Observable<{ matches: boolean }>;
+
+  constructor(breakpointObserver: BreakpointObserver) {
+    this.isMobile$ = breakpointObserver.observe('(max-width: 599px)');
+  }
+
 }

@@ -1,21 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { UtilityService } from '../services/utility.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
   styleUrls: ['./side-menu.component.scss'],
 })
-export class SideMenuComponent implements OnInit {
+export class SideMenuComponent {
 
-  public menuItems: any[];
+  @Input() isMobile: boolean;
 
-  constructor(
-    private utilityService: UtilityService,
-  ) { }
+  public menuItems: any[] = [{
+    title: 'Home',
+    path: 'home',
+  }, {
+    title: 'Gallery',
+    path: 'gallery',
+  }, {
+    divider: true,
+  }, {
+    title: 'About',
+    path: 'about',
+  }];
 
-  ngOnInit(): void {
-    this.menuItems = this.utilityService.getMenuItems();
-  }
+  constructor() { }
 
 }

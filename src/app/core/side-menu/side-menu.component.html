@@ -1,6 +1,6 @@
 
 <div class="px-8 mx-auto items-center justify-between">
-  <div class="px-3 pb-8 pt-8">
+  <div class="px-3 pb-8 pt-8" *ngIf="!isMobile">
     <a class="drop-shadow-lg text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-light-fauna"
       routerLink="home">
       Cameron
@@ -8,7 +8,7 @@
       Erwin
     </a>
   </div>
-  <div>
+  <div [class.pt-8]="isMobile">
     <ul class="list-none ml-auto">
       <li class="nav-item" *ngFor="let m of menuItems">
         <a class="px-3 py-2 items-center text-md uppercase leading-relaxed font-bold text-white hover:opacity-75"
@@ -18,7 +18,7 @@
         </a>
         <hr class="border-ocean-light my-4" *ngIf="m.divider" />
       </li>
-      <li class="nav-item pt-8">
+      <li class="nav-item pt-5">
         <a class="px-3 leading-relaxed hover:opacity-75"
           href="https://www.instagram.com/cam.erwin/"
           target="_blank">
