@@ -1,5 +1,5 @@
-<div class="mr-8 ml-8 mt-5 xl:mr-52 xl:ml-52 columns-1 lg:columns-4 gap-8 space-y-8">
+<div class="columns-1 md:columns-2 lg:columns-4 gap-4 space-y-4">
   <div class="flex justify-center" *ngFor="let photo of photos$ | async" (click)="expandPhoto(photo)">
-    <img class="rounded-xl" [src]="photo.imageURL" />
+    <img [src]="photo.imageURL" />
   </div>
 </div>

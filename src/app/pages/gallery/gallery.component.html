@@ -1,10 +1,10 @@
-<div class="mr-8 ml-8 xl:mr-52 xl:ml-52 mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+<div class="grid grid-cols-2 gap-4">
   <div class="relative cursor-pointer"
     [routerLink]="'/gallery/' + category.id"
     *ngFor="let category of categories$ | async">
-    <img class="rounded-xl hover:filter-none sm:blur-xs" [src]="category.backgroundImageURL" />
-    <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800/50 rounded-b-xl -m-px pointer-events-none">
-      <h2 class="text-white text-xl">
+    <img [src]="category.backgroundImageURL" />
+    <div class="py-2 rounded-b-xl -m-px pointer-events-none">
+      <h2 class="text-black text-xl">
         {{ category.name }}
       </h2>
     </div>
