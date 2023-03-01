@@ -1,7 +1,7 @@
 
-<div class="px-4 mx-auto items-center justify-between w-[225px]">
-  <div class="px-4 pb-8 pt-8">
-    <a class="text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-light-fauna"
+<div class="px-8 mx-auto items-center justify-between">
+  <div class="px-3 pb-8 pt-8">
+    <a class="drop-shadow-lg text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-light-fauna"
       routerLink="home">
       Cameron
       <br />
@@ -11,12 +11,19 @@
   <div>
     <ul class="list-none ml-auto">
       <li class="nav-item" *ngFor="let m of menuItems">
-        <a class="px-3 py-2 items-center text-md uppercase font-bold leading-snug text-white hover:opacity-75"
+        <a class="px-3 py-2 items-center text-md uppercase leading-relaxed font-bold text-white hover:opacity-75"
           [routerLink]="m.path"
           *ngIf="m.divider == null">
           <span>{{ m.title }}</span>
         </a>
-        <hr class="border-ocean-light my-1" *ngIf="m.divider" />
+        <hr class="border-ocean-light my-4" *ngIf="m.divider" />
+      </li>
+      <li class="nav-item pt-8">
+        <a class="px-3 leading-relaxed hover:opacity-75"
+          href="https://www.instagram.com/cam.erwin/"
+          target="_blank">
+          <img class="icon-image inline" src="../../../assets/icons/instagram.png" />
+        </a>
       </li>
     </ul>
   </div>
